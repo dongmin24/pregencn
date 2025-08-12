@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프리미엄CN 랜딩 페이지</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            /* 하단 배너 높이만큼 여백을 주어 마지막 이미지가 가려지지 않도록 함 */
+            padding-bottom: 80px; 
+        }
+
+        img {
+            /* 모든 이미지는 화면 너비에 꽉 차게 설정 */
+            display: block;
+            width: 100%;
+        }
+
+        .footer-banner {
+            /* 화면 하단에 고정 */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #a32035; /* 지정된 배경색 */
+            z-index: 100; /* 다른 요소들 위에 표시 */
+            
+            /* 심장박동 애니메이션 적용 */
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        .footer-banner a {
+            /* 배너 전체를 클릭 가능한 링크 영역으로 설정 */
+            display: block;
+            padding: 20px 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+
+        /* 심장박동 애니메이션 정의 */
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 이미지 파일 목록 -->
+    <img src="01.jpg" alt="페이지 이미지 1">
+    <img src="02.jpg" alt="페이지 이미지 2">
+    <img src="03.jpg" alt="페이지 이미지 3">
+    <img src="04.jpg" alt="페이지 이미지 4">
+
+    <!-- 고정 하단 배너 (중국어 버전) -->
+    <div class="footer-banner">
+        <a href="http://pf.kakao.com/_eTyqn/chat" target="_blank" rel="noopener noreferrer">
+            点击进入KakaoTalk咨询
+        </a>
+    </div>
+
+</body>
+</html>
